@@ -29,9 +29,11 @@ const DUMMY_PADDLES = [
   },
 ];
 
+// 더미데이터 를 map()으로 풀어서 그 안에 자식 컴포넌트 PaddleItem 을 가져온다
 const AvailablePaddle = () => {
   const paddleList = DUMMY_PADDLES.map((paddle) => (
     <PaddleItem
+      id={paddle.id}
       key={paddle.id}
       name={paddle.name}
       description={paddle.description}
