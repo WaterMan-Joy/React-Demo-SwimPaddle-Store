@@ -1,34 +1,50 @@
+import Card from "../UI/Card";
 import classes from "./AvailablePaddle.module.css";
+import PaddleItem from "./PaddleItem/PaddleItem";
 
-const DUMMY_MEALS = [
+const DUMMY_PADDLES = [
   {
-    id: "m1",
-    name: "Sushi",
-    description: "Finest fish and veggies",
+    id: "p1",
+    name: "red paddle",
+    description: "paddle red",
     price: 22.99,
   },
   {
-    id: "m2",
-    name: "Schnitzel",
-    description: "A german specialty!",
+    id: "p2",
+    name: "black paddle",
+    description: "paddle black",
     price: 16.5,
   },
   {
-    id: "m3",
-    name: "Barbecue Burger",
-    description: "American, raw, meaty",
+    id: "p3",
+    name: "blue paddle",
+    description: "paddle blue",
     price: 12.99,
   },
   {
-    id: "m4",
-    name: "Green Bowl",
-    description: "Healthy...and green...",
+    id: "p4",
+    name: "green paddle",
+    description: "paddle green",
     price: 18.99,
   },
 ];
 
 const AvailablePaddle = () => {
-  return;
+  const paddleList = DUMMY_PADDLES.map((paddle) => (
+    <PaddleItem
+      key={paddle.id}
+      name={paddle.name}
+      description={paddle.description}
+      price={paddle.price}
+    />
+  ));
+  return (
+    <section className={classes.paddles}>
+      <Card>
+        <ul>{paddleList}</ul>
+      </Card>
+    </section>
+  );
 };
 
 export default AvailablePaddle;

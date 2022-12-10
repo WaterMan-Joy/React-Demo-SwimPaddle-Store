@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import classes from "./Header.module.css";
-import paddleImages from "../assets/paddle3.avif";
+import swimmingImage from "../assets/swimming1.jpg";
 import HeaderCartButton from "./HeaderCartButton";
 
 const Header = (props) => {
@@ -11,7 +11,7 @@ const Header = (props) => {
         <HeaderCartButton />
       </header>
       <div className={classes["main-image"]}>
-        <img src={paddleImages} alt="swim training paddle" />
+        <img src={swimmingImage} alt="swim training " />
       </div>
     </Fragment>
   );

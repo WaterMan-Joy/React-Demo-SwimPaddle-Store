@@ -1,11 +1,14 @@
 import React, { Fragment } from "react";
-import "./App.css";
 import Header from "./components/Layout/Header";
+import Paddle from "./components/SwimPaddles/Paddle";
 
 function App() {
   return (
     <Fragment>
       <Header />
+      <main>
+        <Paddle />
+      </main>
     </Fragment>
   );
 }
