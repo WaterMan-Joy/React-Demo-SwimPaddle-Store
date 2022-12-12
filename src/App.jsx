@@ -4,7 +4,7 @@ import Header from "./components/Layout/Header";
 import Paddle from "./components/SwimPaddles/Paddle";
 
 // App(onShowCart) => Header(onClickCart) => HeaderCartButton(onClick)
-// App(onCloseCart) => Cart(onClose)
+// App(onCloseApp) => Cart(onClose)
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -23,8 +23,7 @@ function App() {
 
   return (
     <Fragment>
-      {/* (if (cartIsShown) {<Cart onCloseCart={hideCartHandler} />}) */}
-      {cartIsShown && <Cart onCloseCart={hideCartHandler} />}
+      {cartIsShown && <Cart onCloseApp={hideCartHandler} />}
       <Header onShowCart={showCartHandler} />
       <main>
         <Paddle />

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import classes from "./Header.module.css";
-import swimmingImage from "../assets/swimming1.jpg";
+import swimmingImage from "../../assets/swimming1.jpg";
 import HeaderCartButton from "./HeaderCartButton";
 
 // App(onShowCart) => Header(onClickCart) => HeaderCartButton(onClick)

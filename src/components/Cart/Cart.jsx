@@ -1,6 +1,9 @@
 import Modal from "../UI/Modal";
 import classes from "./Cart.module.css";
 
+// App(onCloseApp) => Cart(onClick)
+// App(onCloseApp) => Cart(onCloseCart) => Modal(onCloseModal) => Backdrop(onClick)
+
 const Cart = (props) => {
   const cartItems = (
     <ul className={classes["cart-items"]}>
@@ -10,14 +13,14 @@ const Cart = (props) => {
     </ul>
   );
   return (
-    <Modal onClose={props.onCloseCart}>
+    <Modal onCloseCart={props.onCloseApp}>
       {cartItems}
       <div className={classes.total}>
         <span>total amount</span>
         <span>??.??</span>
       </div>
       <div className={classes.actions}>
-        <button className={classes["button--alt"]} onClick={props.onCloseCart}>
+        <button className={classes["button--alt"]} onClick={props.onCloseApp}>
           Close
         </button>
         <button className={classes.button}>Order</button>
