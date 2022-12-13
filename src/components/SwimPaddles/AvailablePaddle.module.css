@@ -1,17 +1,17 @@
-.paddles {
+.meals {
   max-width: 60rem;
   width: 90%;
-  margin: 5rem auto;
-  animation: paddles-appear 1s ease-out forwards;
+  margin: 2rem auto;
+  animation: meals-appear 1s ease-out forwards;
 }
 
-.paddles ul {
+.meals ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-@keyframes paddles-appear {
+@keyframes meals-appear {
   from {
     opacity: 0;
     transform: translateY(3rem);
